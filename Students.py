@@ -20,15 +20,6 @@ class Student:
 
 
 
-newStudent1 = Student("John","Doe")
-newStudent2 = Student("Jane", "Doe")
 
-print(Student.roster)
-
-print("Removing Jane Doe from Roster")
-newStudent2.removeFromRoster(newStudent2)
-
-print("Printing new roster after removing Jane Doe")
-print(Student.roster)
 
 
