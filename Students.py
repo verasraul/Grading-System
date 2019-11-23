@@ -30,9 +30,6 @@ class Grades(object):
         print(self.courses)
 
 
-studentGrade = Grades(math = 80, science = 75, history = 90)
-
-studentGrade.printGrades()
 
 
 

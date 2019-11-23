@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca5a248d-af84-4f7e-bb65-cafe1d9803bb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Students.py" afterPath="$PROJECT_DIR$/Students.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Grading-System.iws" />
@@ -31,7 +30,7 @@
       <file leaf-file-name="Students.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Students.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7766498">
+            <state vertical-scroll-proportion="1.0203046">
               <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding />
             </state>
@@ -71,9 +70,9 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="423" />
+    <option name="x" value="480" />
     <option name="y" value="22" />
-    <option name="width" value="1154" />
+    <option name="width" value="960" />
     <option name="height" value="811" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -334,7 +333,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="423" y="22" width="1154" height="811" extended-state="0" />
+    <frame x="480" y="22" width="960" height="811" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5294985" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -405,7 +404,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Students.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7766498">
+        <state vertical-scroll-proportion="1.0203046">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
