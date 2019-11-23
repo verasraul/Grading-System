@@ -3,8 +3,8 @@ __author__ = 'verasraul'
 import uuid
 
 
-class Student:
-    roster = {}
+class Student(object):
+    roster = {} #empty dictionary to store accounts
 
     def __init__(self, firstName: str, lastName: str):
         self.firstName = firstName
@@ -14,9 +14,25 @@ class Student:
         self.roster[self.id] = self.name
 
 
-
-    def removeFromRoster(self, name):
+    def removeFromRoster(self):
         del self.roster[self.id]
+
+
+class Grades(object):
+    courses = {}
+
+    def __init__(self, **kwargs):
+        for key, value in kwargs.items():
+            self.courses[key] = value
+
+
+    def printGrades(self):
+        print(self.courses)
+
+
+studentGrade = Grades(math = 80, science = 75, history = 90)
+
+studentGrade.printGrades()
 
 
 
