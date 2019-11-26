@@ -1,0 +1,5 @@
+students = {}
+
+courses = {'Mat': 80, 'Sci': 75, 'his': 70}
+sid = '1234'
+
