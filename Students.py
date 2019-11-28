@@ -4,40 +4,33 @@ import uuid
 
 class Student(object):
 
-    def __init__(self, firstname: str, lastname: str):
-        self.first = firstname
-        self.last = lastname
-        self.id = uuid.uuid4()  #Initiate UUID with new Student instance.
-        #self.roster = {}
-        #self.roster[self.id] = self.name
+    def __init__(self, firstname: str, lastname: str):  # Initiate Student instance w/ firstname & lastname arg strings.
+        self.first = firstname  # Store 'firstname' argument in 'self.first' var.
+        self.last = lastname  # Store 'firstname' argument in 'self.first' var.
+        self.id = str(uuid.uuid4())  # Initiate UUID with new Student instance and return it as a string.
 
-    def full_name(self):
-        return self.first + ' ' + self.last #Combine
-
-
-    '''def addToRoster(self, id, new_student):
-        students =
-        self.name = new_student
-        self.roster[self.id] = self.name
+    def full_name(self): # Get full name method.
+        return self.first + ' ' + self.last  # Return instance firstname & lastname vars combined.
 
     def removeFromRoster(self):
-        del self.roster[self.id]'''
+        del self.roster[self.id]
 
 
 
-class Grade(object):
+class Grades(object):
 
-    def __init__(self, grade):
-        self.grade = grade
-        self.instance_grade = []
-        if self.grade is None:
-            instancegrade = self.instance_grade
-            instancegrade.append(self.grade)
+    def __init__(self, grades: int):
+        self.instancegrade = []
+        self.grade = grades
+        self.instancegrade.append(self.grade)
 
+    def add_grade(self, newgrade):
+        self.newgrade = newgrade
+        self.instancegrade.append(self.newgrade)
+        return self.instancegrade
 
     def get_grades(self):
-        #return Grades.grades
-        return self.instance_grade
+        return self.instancegrade
 
 
 
@@ -50,13 +43,12 @@ class Roster(object):
         self.grades = grades
         self.instance_roster = {}
 
-        instanceroster = self.instance_roster['Student' + Roster.student_count.__str__()] = {}
-        instanceroster['name'] = self.name
-        instanceroster['id'] = self.id
-        instanceroster['grades'] = self.grades
+        instanceroster = self.instance_roster
+        instanceroster['NAME'] = self.name
+        instanceroster['ID'] = self.id
+        instanceroster['GRADES'] = self.grades
 
         Roster.class_roster.append(self.instance_roster)
-
 
     def get_student_info(self):
         return (self.instance_roster)
@@ -85,31 +77,31 @@ print('\n',student_3.full_name(), student_3.id)
 
 
 print('\n'+'Printing Student1 grade(s):')
-student_1_grade = Grade(90)
+student_1_grade = Grades(90)
 print('Grade: ', student_1_grade.get_grades())
 
 print('\nAdding 2 more grades to Student 1...')
-student_1_grade = Grade(80)
-student_1_grade = Grade(70)
+student_1_grade.add_grade(80)
+student_1_grade.add_grade(70)
 print('New Grades: ', student_1_grade.get_grades())
 
 
 print('\n'+'Printing Student2 grade(s):')
-student_2_grade = Grade(60)
+student_2_grade = Grades(60)
 print('Grade: ', student_2_grade.get_grades())
 
 print('\nAdding 2 more grades to Student 2...')
-student_2_grade = Grade(50)
-student_2_grade = Grade(40)
+student_2_grade.add_grade(50)
+student_2_grade.add_grade(40)
 print('New Grades : ', student_2_grade.get_grades())
 
 print('\n'+'Printing Student3 grade(s):')
-student_3_grade = Grade(30)
+student_3_grade = Grades(30)
 print('Grade: ', student_3_grade.get_grades())
 
 print('\nAdding 2 more grades to Student 3...')
-student_3_grade = Grade(20)
-student_3_grade = Grade(10)
+student_3_grade.add_grade(20)
+student_3_grade.add_grade(10)
 print('New Grades : ', student_3_grade.get_grades())
 
 print('\n'+'Converting results to dictionary:'.upper())
