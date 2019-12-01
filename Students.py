@@ -44,8 +44,7 @@ class Roster(object):
         self.instance_roster = {}
 
         instanceroster = self.instance_roster
-        instanceroster['NAME'] = self.name
-        instanceroster['ID'] = self.id
+        instanceroster[str(self.name)] = '{}' +self.id
         instanceroster['GRADES'] = self.grades
 
         Roster.class_roster.append(self.instance_roster)
@@ -55,67 +54,3 @@ class Roster(object):
 
 
 
-print('Creating 3 new Student instances from Student class'.upper())
-print('...')
-print('creating Student1...')
-student_1 = Student('Jane', 'Doe')
-print('--complete--'.upper())
-
-print('\ncreating Student2...')
-student_2 = Student('John', 'Doe')
-print('--complete--'.upper())
-
-print('\ncreating Student3...')
-student_3 = Student('Jim', 'Doe')
-print('--complete--'.upper())
-
-
-print('\nprinting new student instance name and ID:'.upper())
-print('\n',student_1.full_name(), student_1.id)
-print('\n',student_2.full_name(), student_2.id)
-print('\n',student_3.full_name(), student_3.id)
-
-
-print('\n'+'Printing Student1 grade(s):')
-student_1_grade = Grades(90)
-print('Grade: ', student_1_grade.get_grades())
-
-print('\nAdding 2 more grades to Student 1...')
-student_1_grade.add_grade(80)
-student_1_grade.add_grade(70)
-print('New Grades: ', student_1_grade.get_grades())
-
-
-print('\n'+'Printing Student2 grade(s):')
-student_2_grade = Grades(60)
-print('Grade: ', student_2_grade.get_grades())
-
-print('\nAdding 2 more grades to Student 2...')
-student_2_grade.add_grade(50)
-student_2_grade.add_grade(40)
-print('New Grades : ', student_2_grade.get_grades())
-
-print('\n'+'Printing Student3 grade(s):')
-student_3_grade = Grades(30)
-print('Grade: ', student_3_grade.get_grades())
-
-print('\nAdding 2 more grades to Student 3...')
-student_3_grade.add_grade(20)
-student_3_grade.add_grade(10)
-print('New Grades : ', student_3_grade.get_grades())
-
-print('\n'+'Converting results to dictionary:'.upper())
-print('...')
-print('...')
-print('...')
-roster_instance_1 = Roster(student_1.full_name(), student_1.id, student_1_grade.get_grades())
-roster_instance_2 = Roster(student_2.full_name(), student_2.id, student_2_grade.get_grades())
-roster_instance_3 = Roster(student_3.full_name(), student_3.id, student_3_grade.get_grades())
-
-print('\n'+'Viewing instance info with \'get_student_info\' method:'.upper())
-print(roster_instance_1.get_student_info())
-print(roster_instance_2.get_student_info())
-print(roster_instance_3.get_student_info())
-
-print('\n'+'Viewing class info by calling \'Roster.class_roster\' attribute'.upper())
-print(Roster.class_roster)
